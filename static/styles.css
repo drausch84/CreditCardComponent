@@ -1,0 +1,275 @@
+body{
+    min-height:100vh;
+    margin:0;
+    padding:1em;
+    display:flex;
+    align-items: center;
+    align-content: center;
+}
+.credit-card{
+    position:relative;
+}
+.cc-front{
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+    height:430px;
+    width:700px;
+    border-radius:10px;
+    background: rgb(41,79,141);
+    background: linear-gradient(90deg, rgba(41,79,141,1) 0%, rgba(33,75,121,1) 35%, rgba(28,75,120,1) 100%);
+    padding-bottom:20px;
+    display:flex;
+    flex-direction: column;
+    gap:2em;
+    margin-left:500px;
+    overflow:hidden;
+    position:relative;
+    z-index:1;
+}
+.cc-back{
+    position: absolute;
+    top: 2rem;
+    left: 48rem;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+    height:430px;
+    width:700px;
+    border-radius:10px;
+    background-color: #8d94a4;
+    padding-bottom:20px;
+}
+.cc-info-logo{
+    display:flex;
+    gap:15em;
+    margin-top:10px;
+}
+.card-type{
+    text-transform: uppercase;
+    font-family: 'Lucida Sans';
+    color:#fff;
+    font-size:1.4em;
+    margin-left:20px;
+    position:relative;
+    z-index: 1;
+}
+.cc-logo{
+    height:80px;
+    width:110px;
+}
+.watermark{
+    position:relative;
+}
+.watermark::after{
+    content: "";
+    display: block;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: -140px;
+    left: 30px;
+    background-image: url(../static/images/wreath-watermark.png);
+    background-size: 250px 250px;
+    background-position: 30px 30px;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+}
+.cc-chip{
+    margin-top:15px;
+}
+.cc-chip-img{
+    height:80px;
+    width:80px;
+    margin-left:60px;
+    position:relative;
+    z-index:1;
+}
+.cc-info-row{
+    display:flex;
+    position:relative;
+    top:-2em;
+}
+.cc-num-label{
+    color:#fff;
+    font-size:1.2em;
+    font-family:'Lucida Sans';
+    text-transform: uppercase;
+}
+.cc-number{
+    border:0;
+    margin-left:140px;
+    position:relative;
+}
+.cc-num-div{
+    display:flex;
+    gap:1em;
+}
+.cc-num-input{
+    width:4ch;
+    font-size:2em;
+    font-family:monospace;
+    text-shadow: -1px -1px 0px rgba(255,255,255,.6), 1px 1px 0px rgba(0,0,0,0.8);
+    color:white;
+    background: rgb(41,79,141);
+    background: linear-gradient(90deg, rgba(41,79,141,1) 0%, rgba(33,75,121,1) 35%, rgba(28,75,120,1) 100%);
+    outline:none;
+    border:0.5px solid #fff;
+    padding:5px 8px;
+}
+.cc-tap-img{
+    height:60px;
+    width:60px;
+    margin-left:55px;
+    margin-top:15px;
+}
+.expiration-date{
+    border:0;
+    position:relative;
+    top:-3em;
+    left:15em;
+    display:flex;
+    gap:1em;
+}
+.cc-expiration-label{
+    color:#fff;
+    font-size:0.7em;
+    width:40px;
+    font-family:'Lucida Sans';
+    text-transform: uppercase;
+}
+.expiration-month{
+    font-family:monospace;
+    text-shadow: -1px -1px 0px rgba(255,255,255,.6), 1px 1px 0px rgba(0,0,0,0.8);
+    color:white;
+    font-size:1.6em;
+    background: rgb(41,79,141);
+    background: linear-gradient(90deg, rgba(41,79,141,1) 0%, rgba(33,75,121,1) 35%, rgba(28,75,120,1) 100%);
+    border:0.5px solid #fff;
+    outline:none;
+    appearance: none;
+    width:3ch;
+}
+.expiration-year{
+    font-family:monospace;
+    text-shadow: -1px -1px 0px rgba(255,255,255,.6), 1px 1px 0px rgba(0,0,0,0.8);
+    color:white;
+    font-size:1.4em;
+    background: rgb(41,79,141);
+    background: linear-gradient(90deg, rgba(41,79,141,1) 0%, rgba(33,75,121,1) 35%, rgba(28,75,120,1) 100%);
+    border:0.5px solid #fff;
+    outline:none;
+    appearance:none;
+    width:5ch;
+}
+.name-cclogo-div{
+    display:flex;
+    gap:9em;
+    position:relative;
+    top:-6em;
+    left:-3em;
+}
+.cardholder-name{
+    border:0;
+    position:relative;
+    margin-top:20px;
+    margin-left:60px;
+    display:flex;
+    flex-direction: column;
+}
+.cc-name-label{
+    color:#fff;
+    font-size:1em;
+    font-family:'Lucida Sans';
+    text-transform: uppercase;
+}
+.cc-holder{
+    font-family:monospace;
+    text-shadow: -1px -1px 0px rgba(255,255,255,.6), 1px 1px 0px rgba(0,0,0,0.8);
+    color:white;
+    font-size:1.4em;
+    background: rgb(41,79,141);
+    background: linear-gradient(90deg, rgba(41,79,141,1) 0%, rgba(33,75,121,1) 35%, rgba(28,75,120,1) 100%);
+    border:0.5px solid #fff;
+    outline:none;
+    appearance:none;
+    width:31ch;
+}
+.visa-logo-img{
+    height:60px;
+    width:140px;
+    float:right;
+    margin-top:10px;
+    margin-right:15px;
+}
+.inquiry-info{
+    text-transform: uppercase;
+    color:black;
+    font-family: 'Lucida Sans';
+    margin-left:80px;
+}
+.cc-stripe{
+    background-color: #3b2b24;
+    height: 55px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 2.8rem;
+}
+.signature-div{
+    display:flex;
+    gap:2em;
+    position:relative;
+    top:6em;
+    right:4em;
+}
+.signature-holder{
+    background-color: #fff;
+    height:65px;
+    width:300px;
+    position:relative;
+    left:21em;
+}
+.cvc-div{
+    position: absolute;
+    left:42em;
+}
+.cvc-label{
+    color:#fff;
+    font-size:1em;
+    font-family:'Lucida Sans';
+    text-transform: uppercase;
+}
+.cvc-input{
+    font-family:monospace;
+    text-shadow: -1px -1px 0px rgba(255,255,255,.6), 1px 1px 0px rgba(0,0,0,0.8);
+    color:black;
+    font-size:1.4em;
+    background:#fff;
+    border:0.5px solid #fff;
+    outline:none;
+    appearance:none;
+    width:4ch;
+}
+.auth-sig-h{
+    position:relative;
+    top:4.5em;
+    text-transform: uppercase;
+    font-family: 'Lucida Sans';
+    font-size:1.3em;
+}
+.cc-fine-details{
+    position:absolute;
+    top:15em;
+    font-family: 'Lucida Sans';
+    font-size:1.2em;
+    width:660px;
+}

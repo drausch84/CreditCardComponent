@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/styles.css" rel="stylesheet" type="text/css" media="all">
+    <title>Credit Card</title>
+</head>
+<body>
+    <form class="credit-card">
+        <div class="cc-front">
+            <div class="cc-info-logo">
+                <p class="card-type">
+                    preferred cash rewards
+                </p>
+                <img src="static/images/usaa-logo.png" alt="USAA Logo" class="cc-logo">
+            </div>
+            <div class="watermark">
+                <div class="cc-chip">
+                    <img src="static/images/cc-chip.png" alt="CC Chip image" class="cc-chip-img">
+                </div>
+            </div>
+            <div class="cc-info-row">
+                <fieldset class="cc-number">
+                    <legend class="cc-num-label">Card Number</legend>
+                    <div class="cc-num-div">
+                        <input class="cc-num-input" type="tel" maxlength="4" aria-label="Credit Card 1st 4 Digits" required pattern="[0-9]{4}">
+                        <input class="cc-num-input" type="tel" maxlength="4" aria-label="Credit Card 2nd 4 Digits" required pattern="[0-9]{4}">
+                        <input class="cc-num-input" type="tel" maxlength="4" aria-label="Credit Card 3rd 4 Digits" required pattern="[0-9]{4}">
+                        <input class="cc-num-input" type="tel" maxlength="4" aria-label="Credit Card Last 4 Digits" required pattern="[0-9]{4}">
+                    </div>
+                </fieldset>
+                <img src="static/images/cc-tap-icon.png" alt="Tap Icon" class="cc-tap-img">
+            </div>
+            <fieldset class="expiration-date">
+                <legend class="cc-expiration-label">Valid thru</legend>
+                <select class="expiration-month" required>
+                    <option>01</option>
+                    <option>02</option>
+                    <option>03</option>
+                    <option>04</option>
+                    <option>05</option>
+                    <option>06</option>
+                    <option>07</option>
+                    <option>08</option>
+                    <option>09</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                </select>
+                <select class="expiration-year" required>
+                    <option>2022</option>
+                    <option>2023</option>
+                    <option>2024</option>
+                    <option>2025</option>
+                    <option>2026</option>
+                    <option>2027</option>
+                    <option>2028</option>
+                    <option>2029</option>
+                </select>
+            </fieldset>
+            <div class="name-cclogo-div">
+                <fieldset class="cardholder-name">
+                    <legend class="cc-name-label">Cardholder name</legend>
+                    <input class="cc-holder" type="text" maxlength="30" required>
+                </fieldset>
+                <img src="static/images/visa-logo.png" alt="Visa Logo" class="visa-logo-img">
+            </div>
+        </div>
+        <div class="cc-back">
+            <p class="inquiry-info">
+                for inquiries concerning your account, please call 1-800-123-4567
+            </p>
+            <div class="cc-stripe"></div>
+            <div class="signature-div">
+                <div class="signature-holder"></div>
+                <div class="cvc-div">
+                    <label class="cvc-label" for="cvc">CVC</label>
+                    <input class="cvc-input" type="tel" maxlength="3" id="cvc" required pattern="[0-9]{3}" />
+                </div>
+            </div>
+            <h1 class="auth-sig-h">authorized signature. not valid unless signed</h1>
+            <p class="cc-fine-details">
+                Use of this card is cardholder's acknowledgement of receipt and acceptance of USAA Visa credit card agreement.
+                This card shall be surrendered to to issuer upon demand. 
+                <br>
+                If found, please return to:
+                USAA Credit Card Service<br>
+                P.O. Box 123456
+                San Antonio, TX 78265-9532
+
+            </p>
+        </div>
+    </form>
+</body>
+</html>
